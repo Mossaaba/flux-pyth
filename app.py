@@ -84,7 +84,7 @@ def get_time():
 def hello():
     logger.info('Processing request to root endpoint')
     return jsonify({
-        'message': 'Hello amiga :)',
+        'message': 'Hello amiga : -- )',
         'status': 'success',
         'timestamp': datetime.utcnow().isoformat(),
         'environment': app.config['ENVIRONMENT']
