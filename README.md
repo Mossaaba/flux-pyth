@@ -47,6 +47,7 @@ A production-ready Flask application template with Docker support, security feat
 |--------|----------|----------------|
 | GET    | /        | Root endpoint  |
 | GET    | /health  | Health check   |
+| GET    | /time    | Current time   | ?tz=timezone    |
 
 ## 🔐 Security
 

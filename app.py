@@ -4,6 +4,8 @@ from werkzeug.exceptions import HTTPException
 import logging
 import os
 from datetime import datetime
+import pytz  # Add this import at the top
+
 
 # Configure logging
 logging.basicConfig(
@@ -55,11 +57,34 @@ def handle_generic_error(error):
         'timestamp': datetime.utcnow().isoformat()
     }), 500
 
+@app.route('/time')
+def get_time():
+    """Get current time in different formats and timezones"""
+    utc_time = datetime.now(pytz.UTC)
+    
+    # Get timezone from query parameter or default to UTC
+    timezone = request.args.get('tz', 'UTC')
+    try:
+        local_time = utc_time.astimezone(pytz.timezone(timezone))
+    except pytz.exceptions.UnknownTimeZoneError:
+        return jsonify({
+            'error': 'Invalid timezone',
+            'message': f'Timezone "{timezone}" not found',
+            'valid_timezones': 'See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
+        }), 400
+
+    return jsonify({
+        'utc': utc_time.isoformat(),
+        'local': local_time.isoformat(),
+        'timezone': timezone,
+        'timestamp': int(utc_time.timestamp())
+    })
+
 @app.route('/')
 def hello():
     logger.info('Processing request to root endpoint')
     return jsonify({
-        'message': 'Hello amigo :)',
+        'message': 'Hello amiga :)',
         'status': 'success',
         'timestamp': datetime.utcnow().isoformat(),
         'environment': app.config['ENVIRONMENT']

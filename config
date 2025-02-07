@@ -1,0 +1,15 @@
+mouss1959
+_jm8b5!JT-bu3bL
+
+
+docker build -t mouss1959/app:4  . 
+docker push mouss1959/app:4 
+
+
+
+flux bootstrap github \
+  --owner=Mossaaba \
+  --repository=fuxRepository \
+  --branch=main \
+  --path=./clusters/local \
+  --personal
