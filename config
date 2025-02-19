@@ -13,3 +13,7 @@ flux bootstrap github \
   --branch=main \
   --path=./clusters/local \
   --personal
+
+
+
+  
