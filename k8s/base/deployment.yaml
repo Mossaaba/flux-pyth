@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/flask-app:latest  # Replace with a placeholder
+        image: mouss1959/flask-app:1.0.0  # Replace with a placeholder
         ports:
         - containerPort: 5001

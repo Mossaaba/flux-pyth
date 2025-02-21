@@ -7,7 +7,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: flask-app 
   git:
     checkout:
       ref:
@@ -16,7 +16,7 @@ spec:
       author:
         name: fluxcdbot
         email: fluxcdbot@users.noreply.github.com
-      messageTemplate: "Update image tag to {{ .LatestImage }}"
+      messageTemplate: "Update image tag "
     push:
       branch: main
   update:
