@@ -4,7 +4,7 @@ metadata:
   name: flask-app  # 🔹 Ensure this name matches `flux get kustomizations`
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1m
   path: ./k8s/base  # 🔹 Ensure this path is correct
   prune: true
   sourceRef:
