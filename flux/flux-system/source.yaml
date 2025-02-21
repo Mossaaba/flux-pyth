@@ -8,3 +8,5 @@ spec:
   url: https://github.com/Mossaaba/flux-pyth  # 🔹 Ensure this is correct
   ref:
     branch: main
+  secretRef:
+    name: flux-test  # 🔹 Ensure this matches your secret
