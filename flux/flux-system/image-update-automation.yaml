@@ -20,5 +20,5 @@ spec:
     push:
       branch: main
   update:
-    path: /k8s/base
+    path: ./k8s/base
     strategy: Setters

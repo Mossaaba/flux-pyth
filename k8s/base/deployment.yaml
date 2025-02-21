@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/flask-app:latest  # Replace with a placeholder
+        image: mouss1959/flask-app:1.1.1  # {"$imagepolicy": "flux-system:flask-app-policy"}
         ports:
         - containerPort: 5001

@@ -8,4 +8,4 @@ spec:
     name: flask-app-repo
   policy:
     semver:
-      range: ">=1.0.8"
+      range: ">=1.1.1"
