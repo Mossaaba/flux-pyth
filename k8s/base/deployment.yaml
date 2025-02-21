@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: docker.io/mouss1959/flask-app:1.1.3 # {"$imagepolicy": "flux-system:flask-app-policy"}
+        image: docker.io/mouss1959/flask-app:1.1.5 # {"$imagepolicy": "flux-system:flask-app-policy"}
         ports:
         - containerPort: 5001
