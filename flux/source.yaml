@@ -1,10 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: flask-app
+  name: flask-app  # 🔹 Ensure this matches `flux get sources git`
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/Mossaaba/flux-pyth
+  url: https://github.com/Mossaaba/flux-pyth  # 🔹 Ensure this is correct
   ref:
     branch: main
