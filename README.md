@@ -112,7 +112,7 @@ pip install -r requirements.txt
 
 
 1- add  access token (classic)
-2- create flux folder and add (Kustomzation.yaml, source.yaml)
+2- create flux folder and add (Kustomzation.yaml, git-repository.yaml)
 3- update Kustomzation to use K8S/base deployement 
 
 
@@ -125,7 +125,7 @@ flux bootstrap github \
   
 4- apply kustomization and source 
 kubectl apply -f flux/kustomization.yaml   
-kubectl apply -f flux/source.yaml    
+kubectl apply -f flux/git-repository.yaml    
 
 5- check pods 
 

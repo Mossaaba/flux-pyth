@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flask-app  # 🔹 Ensure this matches `source.yaml`
+    name: flask-app  # 🔹 Ensure this matches `git-repository.yaml`
   targetNamespace: python-web-app-ns
