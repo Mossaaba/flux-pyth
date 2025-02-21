@@ -100,6 +100,17 @@ def holla():
         'environment': app.config['ENVIRONMENT']
     })
 
+
+@app.route('/marhaba')
+def holla():
+    logger.info('Processing request to root endpoint')
+    return jsonify({
+        'message': 'marhaba :)',
+        'status': 'success',
+        'timestamp': datetime.utcnow().isoformat(),
+        'environment': app.config['ENVIRONMENT']
+    })
+
 @app.route('/health')
 def health_check():
     return jsonify({
