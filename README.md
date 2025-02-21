@@ -108,8 +108,6 @@ pip install -r requirements.txt
 1. Run ./bin/run_cluster.sh
 
 
-
-
 ## Flux 
 
 
