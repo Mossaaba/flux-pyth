@@ -125,12 +125,18 @@ flux bootstrap github \
   --path=flux \
   --personal
   
+4- apply kustomization and source 
+kubectl apply -f flux/kustomization.yaml   
+kubectl apply -f flux/source.yaml    
 
-4- kubectl get pods -n flux-system
-5- kubectl get pods -n python-web-app-ns
+5- check pods 
 
+kubectl get kustomizations 
+kubectl get sources git 
 
-flux get kustomizations
+kubectl get pods -n flux-system
+kubectl get pods -n python-web-app-ns
+
 
 # Manully 
 flux reconcile source git flux-system
