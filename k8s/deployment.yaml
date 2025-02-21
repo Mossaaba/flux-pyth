@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/flask-app:1.0.3  # Replace with your Docker image
+        image: mouss1959/flask-app:1.0.5  # Replace with your Docker image
         ports:
         - containerPort: 5001

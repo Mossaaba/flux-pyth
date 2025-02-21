@@ -21,7 +21,7 @@ CORS(app)  # Enable CORS for all routes
 # Configuration
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key-here')
-    ENVIRONMENT = os.environ.get('FLASK_ENV', 'production')
+    ENVIRONMENT = os.environ.get('FLASK_ENV', 'dev')
     
 app.config.from_object(Config)
 
@@ -84,7 +84,7 @@ def get_time():
 def hello():
     logger.info('Processing request to root endpoint')
     return jsonify({
-        'message': 'Hello amiga , qui passa ?  : -- )',
+        'message': 'Hello :)',
         'status': 'success',
         'timestamp': datetime.utcnow().isoformat(),
         'environment': app.config['ENVIRONMENT']

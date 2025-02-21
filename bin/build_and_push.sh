@@ -1,9 +1,13 @@
 #!/bin/bash
 
+
+# alias run_push_to_docker_hub="./bin/build_and_push.sh"
+
+
 # Configuration
 DOCKER_HUB_USERNAME="mouss1959"
 IMAGE_NAME="flask-app"
-VERSION="1.0.3"
+VERSION="1.0.5"
 
 # Colors for output
 RED='\033[0;31m'

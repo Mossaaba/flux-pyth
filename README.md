@@ -37,7 +37,7 @@ A production-ready Flask application template with Docker support, security feat
 
 | Variable    | Description           | Default     |
 |-------------|--------------------|-------------|
-| FLASK_ENV   | Environment mode   | production  |
+| FLASK_ENV   | Environment mode   | dev  |
 | SECRET_KEY  | App secret key    | None        |
 | PORT        | Application port   | 5001        |
 
@@ -84,5 +84,26 @@ This project is licensed under the MIT License - see the LICENSE file for detail
    ```
 
 ## 📫 Support
+## Run the app : 
 
-For support, email your@email.com or open an issue in the repository.
+### Localy (VENV)
+
+1. Create and Activate a Virtual Environment (Optional but Recommended) 
+
+- python -m venv venv  # Create a virtual environment
+- source venv/bin/activate  # Activate on macOS/Linux
+- venv\Scripts\activate  # Activate on Windows
+
+2. install requirments : 
+
+pip install -r requirements.txt
+
+3. export FLASK_APP=app.py  # On macOS/Linux
+          set FLASK_APP=app.py  # On Windows
+4. flask run
+
+
+### Localy (DOCKER)
+
+1. Run ./bin/run_cluster.sh
+

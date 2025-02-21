@@ -57,7 +57,7 @@ docker run -d \
     --name $CONTAINER_NAME \
     -p $PORT:$PORT \
     -e SECRET_KEY=development-key \
-    -e FLASK_ENV=development \
+    -e FLASK_ENV=dev \
     -e PORT=$PORT \
     $IMAGE_NAME
 
