@@ -53,7 +53,7 @@ check_error
 
 # 🔄 **Apply Source Configuration**
 echo -e "${CYAN} >> Applying Source...${NC}"
-kubectl apply -f flux/source.yaml    
+kubectl apply -f flux/git-repository.yaml    
 check_error
 
 # 🔄 **Apply Kustomization**

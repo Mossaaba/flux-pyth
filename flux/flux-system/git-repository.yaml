@@ -1,4 +1,4 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: flask-app  # 🔹 Ensure this matches `flux get sources git`
@@ -9,4 +9,6 @@ spec:
   ref:
     branch: main
   secretRef:
-    name: flux-test  # 🔹 Ensure this matches your secret
+    name: flux-system-github-token  # 🔹 Ensure this matches your secret
+
+
