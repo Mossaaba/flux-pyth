@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: python-web-app
+  annotations:
+    fluxcd.io/automated: "true"  # Enable automation
   namespace: python-web-app-ns  # Add this line
   labels:
     app: python-web-app
@@ -17,6 +19,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/flask-app:1.0.5  # Replace with your Docker image
+        image: mouss1959/flask-app:latest  # Replace with a placeholder
         ports:
         - containerPort: 5001

@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageRepository
+metadata:
+  name: flask-app-repo
+  namespace: flux-system
+spec:
+  image: docker.io/mouss1959/flask-app  # Replace with your image
+  interval: 1m  # How often to check for new images 
