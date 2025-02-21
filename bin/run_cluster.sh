@@ -49,7 +49,7 @@ fi
 
 # Navigate to the K8S manifest files:  
 echo -e "${CYAN}Navigating to Kubernetes configuration directory...${NC}"
-cd /Users/moussabaidoud/workspace/devOps/k8s/flux-pyth/k8s
+cd /Users/moussabaidoud/workspace/devOps/k8s/flux-pyth/k8s/base
 check_error
 echo -e "${GREEN}Successfully positioned in $(pwd).${NC}"
 

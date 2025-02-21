@@ -107,3 +107,31 @@ pip install -r requirements.txt
 
 1. Run ./bin/run_cluster.sh
 
+
+
+
+## Flux 
+
+
+1- add  access token (classic)
+2- create flux folder and add (Kustomzation.yaml, source.yaml)
+3- update Kustomzation to use K8S/base deployement 
+
+
+flux bootstrap github \
+  --owner=Mossaaba \
+  --repository=flux-pyth \
+  --branch=main \
+  --path=flux \
+  --personal
+  
+
+4- kubectl get pods -n flux-system
+5- kubectl get pods -n python-web-app-ns
+
+
+flux get kustomizations
+
+# Manully 
+flux reconcile source git flux-system
+flux reconcile kustomization python-web-app

@@ -89,3 +89,4 @@ wheels/
 # Misc
 .DS_Store
 Thumbs.db 
+.config 
