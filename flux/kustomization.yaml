@@ -11,4 +11,4 @@ spec:
     kind: GitRepository
     name: flask-app
   target:
-    namespace: default 
+    namespace: python-web-app-ns 
