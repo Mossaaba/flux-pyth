@@ -7,7 +7,7 @@
 # Configuration
 DOCKER_HUB_USERNAME="mouss1959"
 IMAGE_NAME="flask-app"
-VERSION="1.1.2"
+VERSION="1.1.5"
 
 # Colors for output
 RED='\033[0;31m'
