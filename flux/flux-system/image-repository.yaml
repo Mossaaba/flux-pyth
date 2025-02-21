@@ -5,4 +5,4 @@ metadata:
   namespace: flux-system
 spec:
   image: docker.io/mouss1959/flask-app  # Replace with your image
-  interval: 1m  # How often to check for new images 
+  interval: 5m  # How often to check for new images 
