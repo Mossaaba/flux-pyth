@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: python-web-app
   annotations:
-    fluxcd.io/automated: "true"  # Enable automation
-  namespace: python-web-app-ns  # Add this line
+    fluxcd.io/automated: "true" # Enable automation
+  namespace: python-web-app-ns # Add this line
   labels:
     app: python-web-app
 spec:
@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: mouss1959/flask-app:1.1.1  # {"$imagepolicy": "flux-system:flask-app-policy"}
+        image: docker.io/mouss1959/flask-app:1.1.2 # {"$imagepolicy": "flux-system:flask-app-policy"}
         ports:
         - containerPort: 5001
